@@ -1,6 +1,5 @@
 // HomeWork1.js - MiniSprint 001: TypeScript Fundamentals
 
-// Topic: 1.1 ES6 Methods - Examples and Explanations
 
 /* ================================================
    WHAT IS ES6?
@@ -840,4 +839,55 @@ HOTEL USES:
 - Database queries
 - Payment processing
 - Email sending
+*/
+
+/* ================================================
+   WHAT ARE CLOSURES?
+   ================================================ */
+
+/*
+Closure: A function that remembers variables from its outer scope
+even after the outer function has finished running.
+
+Hotel analogy: Like a hotel room key that remembers which floor it belongs to,
+even when you're not on that floor anymore. The key (function) carries
+the floor information (variables) with it wherever it goes.
+*/
+
+console.log("=== CLOSURES ===");
+
+/* ================================================
+    BASIC CLOSURE 
+   ================================================ */
+
+console.log("---  HOTEL ROOM KEY CLOSURE ---");
+
+function createHotelKey(roomNumber) {
+  // This is like the floor information stored in the key
+  const room = roomNumber;
+  
+  // This is the key that remembers which room it opens
+  return function(guestName) {
+    return `${guestName}'s key opens room ${room}`;
+  };
+}
+
+const key101 = createHotelKey(101);
+const key205 = createHotelKey(205);
+
+console.log(key101('John')); // "John's key opens room 101"
+console.log(key205('Mary')); // "Mary's key opens room 205"
+
+/*
+HOW IT WORKS:
+1. Outer function creates inner function
+2. Inner function remembers outer function's variables
+3. Inner function is returned or used elsewhere
+4. Variables stay alive because inner function still needs them
+
+WHY USE CLOSURES?
+- Keep data private (can't be accessed directly)
+- Create specialized functions (each with different settings)
+- Maintain state (remember values between function calls)
+- Avoid variable conflicts (each closure has its own copy)
 */
