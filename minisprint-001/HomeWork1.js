@@ -159,3 +159,131 @@ Better Performance: Modern methods are optimized for speed
 Industry Standard: All modern frameworks (React, NestJS) use ES6 extensively
 Easier Debugging: Shorter, clearer code means fewer bugs
 Team Collaboration: Other developers can understand your code faster`);
+
+
+/* ================================================
+   WHAT ARE VARIABLE DECLARATIONS?
+   ================================================ */
+
+/*
+Variable declarations are how we create containers to store data.
+Think of them as different types of hotel room keys:
+- var: Old master key (opens too many doors, security issues)
+- let: Modern smart card (precise access control)
+- const: VIP key card (cannot be duplicated or changed)
+*/
+
+console.log("=== VAR, LET, CONST DIFFERENCES ===");
+
+/* ================================================
+   1. VAR - The Old Way 
+   ================================================ */
+
+console.log("--- 1. VAR (Function-Scoped or Global-Scoped) ---");
+console.log("var has two main scopes: function scope and global scope, but it completely ignores block scope (which is why let and const were introduced in ES6).");
+
+function hotelBookingVar() {
+  var guestName = 'Clem';
+  var roomNumber = 101;
+  
+  if (true) {
+    var guestName = 'Clemy'; // This overwrites the previous guestName!
+    var amenities = 'wifi, pool'; // Available throughout entire function
+  }
+  
+  console.log("Guest name:", guestName); // 'Clemy' - unexpected!
+  console.log("Amenities:", amenities); // 'wifi, pool' - accessible outside if block
+}
+
+// Hoisting example with var
+// Hoisting means that variable declarations are moved to the top of their scope
+// var declarations, wherever they occur in a script, are processed before any code within the script is executed
+console.log("\nVar hoisting example:");
+console.log("Hotel name before declaration:", hotelName); // undefined (not an error!)
+var hotelName = 'Grand Plaza';
+console.log("Hotel name after declaration:", hotelName); // 'Grand Plaza'
+
+hotelBookingVar();
+
+/* ================================================
+   2. LET - Modern Block-Scoped Variable
+   ================================================ */
+
+console.log("\n--- 2. LET (Block-Scoped) ---");
+
+function hotelBookingLet() {
+  let availableRooms = 50;
+  let guestCount = 0;
+  
+  if (guestCount < availableRooms) {
+    let roomType = 'standard'; // Only available in this block
+    let specialOffer = '10% discount';
+    
+    console.log("Room type inside block:", roomType); // Works fine
+  }
+  
+  // console.log(roomType); // This would cause ReferenceError!
+  
+  // Can reassign let variables
+  availableRooms = 45; // This works
+  guestCount = 5; // This works too
+  
+  console.log("Available rooms:", availableRooms);
+  console.log("Guest count:", guestCount);
+}
+
+
+/* ================================================
+   3. CONST - Immutable Declaration
+   ================================================ */
+
+console.log("\n--- 3. CONST (Cannot be reassigned) ---");
+
+// Hotel configuration with const
+const HOTEL_NAME = 'Grand Plaza Hotel';
+const MAX_GUESTS_PER_ROOM = 4;
+const HOTEL_AMENITIES = ['wifi', 'pool', 'spa', 'gym'];
+
+console.log("Hotel name:", HOTEL_NAME);
+console.log("Max guests per room:", MAX_GUESTS_PER_ROOM);
+console.log("Hotel amenities:", HOTEL_AMENITIES);
+
+// const HOTEL_NAME = 'Another Hotel'; // This would cause SyntaxError!
+// HOTEL_NAME = 'New Name'; // This would cause TypeError!
+
+// Object mutation with const (this is allowed)
+const hotelInfo = {
+  name: 'Grand Plaza',
+  rooms: 150,
+  rating: 4.5
+};
+
+console.log("Original hotel info:", hotelInfo);
+
+// This works - we're modifying the object, not reassigning the variable
+hotelInfo.rating = 4.7;
+hotelInfo.newProperty = 'excellent service';
+
+console.log("Modified hotel info:", hotelInfo);
+
+/* ================================================
+   4. LOOP VARIABLE PROBLEM
+   ================================================ */
+
+console.log("\n--- 4. LOOP VARIABLE PROBLEM ---");
+
+// Problem with var in loops
+console.log("Problem with var in setTimeout:");
+for (var i = 1; i <= 3; i++) {
+  setTimeout(() => {
+    console.log('var room:', i); // Always prints 4!
+  }, 100);
+}
+
+// Solution with let
+console.log("Solution with let in setTimeout:");
+for (let j = 1; j <= 3; j++) {
+  setTimeout(() => {
+    console.log('let room:', j); // Prints 1, 2, 3 correctly
+  }, 200);
+}
