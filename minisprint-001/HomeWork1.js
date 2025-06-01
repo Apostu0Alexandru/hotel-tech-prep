@@ -287,3 +287,19 @@ for (let j = 1; j <= 3; j++) {
     console.log('let room:', j); // Prints 1, 2, 3 correctly
   }, 200);
 }
+
+/* ================================================
+    Spread Operator
+   ================================================ */
+
+console.log("\n--- SPREAD OPERATOR ---");
+// Spread operator (...) allows us to expand elements of an iterable (like an array, object) into individual elements
+// Use it to combine, copy, or spread data easily
+
+const basicAmenities = ['wifi', 'parking'];
+const premiumAmenities = ['pool', 'spa'];
+const allAmenities = [...basicAmenities, ...premiumAmenities];
+
+console.log("Basic amenities:", basicAmenities);
+console.log("Premium amenities:", premiumAmenities);
+console.log("All amenities using spread operator:", allAmenities);
