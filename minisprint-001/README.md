@@ -2,6 +2,8 @@
 🎯 Overview
 This MiniSprint covers 9 fundamental concepts essential for modern web development using TypeScript, Remix, and NestJS.
 📚 Topics Covered
+
+
 1.1 ES6 Methods
 Array methods: map(), filter(), find(), includes()
 Object methods: Object.keys(), Object.values(), Object.entries()
