@@ -663,3 +663,181 @@ bookHotel('H002')
   .catch(error => {
     console.log('Error:', error);
   });
+
+
+// HomeWork1.js - MiniSprint 001: TypeScript Fundamentals
+// Author: [Your Name]
+// Date: June 01, 2025
+// Topic: 1.7 Async/Await
+
+/* ================================================
+   WHAT IS ASYNC/AWAIT?
+   ================================================ */
+
+/*
+Async/Await: Clean way to handle promises
+- async: Function returns a promise
+- await: Wait for promise to resolve
+
+Like waiting for hotel room service - you wait, then continue.
+*/
+
+console.log("=== ASYNC/AWAIT ===");
+
+/* ================================================
+   1. BASIC USAGE
+   ================================================ */
+
+console.log("--- 1. BASIC USAGE ---");
+
+async function getHotelPrice() {
+  return 200; // Returns Promise.resolve(200)
+}
+
+async function bookRoom() {
+  const price = await getHotelPrice();
+  console.log('Price:', price);
+  return `Booked for $${price}`;
+}
+
+bookRoom().then(console.log);
+
+/* ================================================
+   2. ERROR HANDLING
+   ================================================ */
+
+console.log("\n--- 2. ERROR HANDLING ---");
+
+function checkRoom() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      Math.random() > 0.5 ? resolve('Available') : reject('Not available');
+    }, 500);
+  });
+}
+
+async function handleBooking() {
+  try {
+    const result = await checkRoom();
+    console.log('Success:', result);
+  } catch (error) {
+    console.log('Error:', error);
+  }
+}
+
+handleBooking();
+
+/* ================================================
+   3. SEQUENTIAL vs PARALLEL
+   ================================================ */
+
+console.log("\n--- 3. SEQUENTIAL vs PARALLEL ---");
+
+function getPrice(id) {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(Math.floor(Math.random() * 200) + 100), 300);
+  });
+}
+
+// Sequential (slow)
+async function sequential() {
+  const p1 = await getPrice('H1');
+  const p2 = await getPrice('H2');
+  console.log('Sequential:', [p1, p2]);
+}
+
+// Parallel (fast)
+async function parallel() {
+  const [p1, p2] = await Promise.all([getPrice('H1'), getPrice('H2')]);
+  console.log('Parallel:', [p1, p2]);
+}
+
+sequential();
+parallel();
+
+/* ================================================
+   4. HOTEL BOOKING FLOW
+   ================================================ */
+
+console.log("\n--- 4. BOOKING FLOW ---");
+
+async function step(name, delay) {
+  await new Promise(resolve => setTimeout(resolve, delay));
+  return `${name} complete`;
+}
+
+async function completeBooking() {
+  try {
+    const check = await step('Check availability', 200);
+    const reserve = await step('Reserve room', 300);
+    const pay = await step('Process payment', 400);
+    
+    console.log('Booking steps:', [check, reserve, pay]);
+    return 'Booking successful';
+  } catch (error) {
+    return 'Booking failed';
+  }
+}
+
+completeBooking().then(console.log);
+
+/* ================================================
+   5. REAL EXAMPLE
+   ================================================ */
+
+console.log("\n--- 5. REAL EXAMPLE ---");
+
+async function searchHotels(city) {
+  await new Promise(resolve => setTimeout(resolve, 400));
+  return [{ name: 'Hotel A', price: 200 }, { name: 'Hotel B', price: 150 }];
+}
+
+async function getHotelDetails(hotels) {
+  const details = await Promise.all(
+    hotels.map(async hotel => ({
+      ...hotel,
+      rating: 4.5,
+      available: true
+    }))
+  );
+  return details;
+}
+
+async function findHotels(city) {
+  try {
+    const hotels = await searchHotels(city);
+    const details = await getHotelDetails(hotels);
+    console.log('Found hotels:', details);
+    return details;
+  } catch (error) {
+    console.log('Search failed:', error);
+    return [];
+  }
+}
+
+findHotels('NYC');
+
+console.log("\n=== ASYNC/AWAIT COMPLETE ===");
+
+/* ================================================
+   SUMMARY
+   ================================================ */
+
+/*
+ASYNC/AWAIT:
+- async function() {} - returns Promise
+- await promise - waits for result
+- try/catch for errors
+- Promise.all() for parallel operations
+
+BENEFITS:
+- Cleaner than .then() chains
+- Easier error handling
+- More readable code
+
+HOTEL USES:
+- API calls
+- Database queries
+- Payment processing
+- Email sending
+*/
