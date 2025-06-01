@@ -303,3 +303,77 @@ const allAmenities = [...basicAmenities, ...premiumAmenities];
 console.log("Basic amenities:", basicAmenities);
 console.log("Premium amenities:", premiumAmenities);
 console.log("All amenities using spread operator:", allAmenities);
+
+
+/* ================================================
+   WHAT IS OBJECT ITERATION AND DEEP COPY?
+   ================================================ */
+
+/*
+Object iteration: Going through each property in an object
+Deep copy: Creating a completely separate copy of an object
+
+Think of iteration like checking each hotel room one by one,
+and deep copy like building an identical hotel in another location.
+*/
+
+console.log("=== OBJECT ITERATION AND DEEP COPY ===");
+
+const hotelNYC = { name: 'Grand Plaza', rooms: 150, rating: 4.5, city: 'NYC' };
+
+// Method 1: Object.keys() - Get property names
+console.log("Object.keys():", Object.keys(hotelNYC));
+
+// Method 2: Object.values() - Get property values
+console.log("Object.values():", Object.values(hotelNYC));
+
+// Method 3: Object.entries() - Get key-value pairs
+console.log("Object.entries():", Object.entries(hotelNYC));
+
+// Method 4: for...in loop
+console.log("for...in loop:");
+for (let key in hotelNYC) {
+  console.log(`${key}: ${hotelNYC[key]}`);
+}
+
+// Method 5: forEach with entries
+console.log("forEach with entries:");
+Object.entries(hotelNYC).forEach(([key, value]) => {
+  console.log(`${key}: ${value}`);
+});
+
+/* ================================================
+   2. SHALLOW COPY vs DEEP COPY
+   ================================================ */
+
+console.log("\n--- 2. SHALLOW COPY vs DEEP COPY ---");
+
+const originalHotel = {
+  name: 'Grand Plaza',
+  location: { city: 'NYC', country: 'USA' }
+};
+
+// Shallow copy - nested objects still connected
+const shallowCopy = { ...originalHotel };
+shallowCopy.location.city = 'Boston'; // This changes original too!
+
+console.log("Original after shallow copy change:", originalHotel);
+console.log("Shallow copy:", shallowCopy);
+
+
+/* ================================================
+   3. DEEP COPY METHODS
+   ================================================ */
+
+console.log("\n--- 3. DEEP COPY METHODS ---");
+
+const hotelData = {
+  name: 'Grand Plaza',
+  details: { rooms: 150, amenities: ['wifi', 'pool'] }
+};
+
+// JSON stringify/parse (most common)
+const deepCopy1 = JSON.parse(JSON.stringify(hotelData));
+deepCopy1.details.rooms = 200;
+console.log("Original:", hotelData);
+console.log("Deep copy 1:", deepCopy1);
