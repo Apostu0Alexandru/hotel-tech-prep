@@ -167,7 +167,7 @@ Team Collaboration: Other developers can understand your code faster`);
 
 /*
 Variable declarations are how we create containers to store data.
-Think of them as different types of hotel room keys:
+for analogy of hotel: different types of hotel room keys:
 - var: Old master key (opens too many doors, security issues)
 - let: Modern smart card (precise access control)
 - const: VIP key card (cannot be duplicated or changed)
@@ -313,7 +313,7 @@ console.log("All amenities using spread operator:", allAmenities);
 Object iteration: Going through each property in an object
 Deep copy: Creating a completely separate copy of an object
 
-Think of iteration like checking each hotel room one by one,
+Analogy: iteration like checking each hotel room one by one,
 and deep copy like building an identical hotel in another location.
 */
 
@@ -390,7 +390,7 @@ Array methods are functions that work with arrays:
 - Iterator: Loop through elements and process them
 - Mutator: Modify the original array
 
-Think of them as different hotel management tools:
+For example different hotel management tools:
 - Accessor: Check room status without changing anything
 - Iterator: Visit each room to collect information
 - Mutator: Actually modify room assignments
@@ -565,3 +565,101 @@ MUTATOR METHODS (Change original):
 - splice() - Add/remove at position
 - sort() - Sort elements
 - reverse() - Reverse order */
+
+
+/* ================================================
+   WHAT ARE CALLBACKS AND PROMISES?
+   ================================================ */
+
+/*
+Callback: Function passed to another function, called when done
+Promise: Object that will eventually return a result or error
+
+Hotel analogy:
+- Callback: Give room service your number, they call back when ready
+- Promise: Reservation confirmation that promises a room or refund
+*/
+
+console.log("=== PROMISES AND CALLBACKS ===");
+
+
+/* ================================================
+   1. CALLBACKS - Basic Example
+   ================================================ */
+
+console.log("--- 1. CALLBACKS ---");
+
+// Simple callback
+function bookRoom(guestName, callback) {
+  setTimeout(() => {
+    const bookingId = `BK${Date.now()}`;
+    callback(bookingId);
+  }, 1000);
+}
+
+bookRoom('Clem', (id) => {
+  console.log('Room booked! ID:', id);
+});
+
+// Callback with error handling
+function checkRoom(roomNumber, callback) {
+  setTimeout(() => {
+    const available = roomNumber < 200;
+    if (available) {
+      callback(null, 'Room available');
+    } else {
+      callback('Room not available', null);
+    }
+  }, 500);
+}
+
+checkRoom(101, (error, result) => {
+  if (error) {
+    console.log('Error:', error);
+  } else {
+    console.log('Success:', result);
+  }
+});
+
+/* ================================================
+   2. PROMISES - Basic Example
+   ================================================ */
+
+console.log("\n--- 2. PROMISES ---");
+
+// Simple promise
+function getHotelPrice(hotelId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const price = 200;
+      resolve(price);
+    }, 800);
+  });
+}
+
+getHotelPrice('H001')
+  .then(price => {
+    console.log('Hotel price:', price);
+  });
+
+// Promise with error
+function bookHotel(hotelId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const success = Math.random() > 0.5;
+      if (success) {
+        resolve('Booking confirmed');
+      } else {
+        reject('Booking failed');
+      }
+    }, 600);
+  });
+}
+
+bookHotel('H002')
+  .then(result => {
+    console.log('Success:', result);
+  })
+  .catch(error => {
+    console.log('Error:', error);
+  });
