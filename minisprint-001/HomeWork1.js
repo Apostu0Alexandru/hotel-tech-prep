@@ -891,3 +891,99 @@ WHY USE CLOSURES?
 - Maintain state (remember values between function calls)
 - Avoid variable conflicts (each closure has its own copy)
 */
+
+console.log("=== USESTATE AND USEREF ===");
+
+console.log("--- 1. USESTATE ---");
+
+// Hotel room selection
+function HotelRoomSelector() {
+  const [selectedRoom, setSelectedRoom] = useState('standard');
+  
+  function selectRoom(roomType) {
+    setSelectedRoom(roomType);
+  }
+  
+  selectRoom('deluxe'); // Registry updated - new display: deluxe
+  selectRoom('suite');  // Registry updated - new display: suite
+}
+
+HotelRoomSelector();
+
+
+/* ================================================
+   2. USEREF 
+   ================================================ */
+
+console.log("\n--- 2. USEREF  ---");
+
+
+// Hotel form focus management
+function HotelFormFocus() {
+  const nameInputRef = useRef(null);
+  const emailInputRef = useRef(null);
+  
+  function focusNameInput() {
+    console.log('Focusing name input (silent operation)');
+    // In React: nameInputRef.current.focus();
+  }
+  
+  function focusEmailInput() {
+    console.log('Focusing email input (silent operation)');
+    // In React: emailInputRef.current.focus();
+  }
+  
+  focusNameInput();
+  focusEmailInput();
+}
+
+HotelFormFocus();
+
+
+
+/* ================================================
+   3. WHEN TO USE EACH
+   ================================================ */
+
+console.log("\n--- 3. WHEN TO USE EACH ---");
+
+function HotelDashboard() {
+  // useState: Data that affects what guests see
+  const [currentOccupancy, setCurrentOccupancy] = useState(75);
+  const [availableRooms, setAvailableRooms] = useState(25);
+  
+  // useRef: Behind-the-scenes tracking
+  const pageViews = useRef(0);
+  const lastRefresh = useRef(Date.now());
+  
+  function updateOccupancy(newOccupancy) {
+    setCurrentOccupancy(newOccupancy);
+    console.log('Dashboard display updated:', newOccupancy);
+  }
+  
+  function trackPageView() {
+    pageViews.current += 1;
+    lastRefresh.current = Date.now();
+    console.log('Silent tracking - page views:', pageViews.current);
+  }
+  
+  updateOccupancy(80); // Public update
+  trackPageView();     // Private tracking
+}
+
+HotelDashboard();
+
+/*
+USESTATE AND USEREF WITH HOTEL ANALOGY:
+
+USESTATE (Hotel Guest Registry):
+- Like a public display board that updates when changed
+- Triggers re-renders (updates the UI)
+- Use for: guest counts, room selections, booking forms
+- Syntax: const [state, setState] = useState(initialValue)
+
+USEREF (Hotel Safe):
+- Like a private storage that doesn't announce changes
+- No re-renders triggered
+- Use for: tracking counters, form focus, timers
+- Syntax: const ref = useRef(initialValue) */
