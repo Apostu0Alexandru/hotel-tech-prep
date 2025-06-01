@@ -355,7 +355,7 @@ const originalHotel = {
 
 // Shallow copy - nested objects still connected
 const shallowCopy = { ...originalHotel };
-shallowCopy.location.city = 'Boston'; // This changes original too!
+shallowCopy.location.city = 'Larnaka'; // This changes original too!
 
 console.log("Original after shallow copy change:", originalHotel);
 console.log("Shallow copy:", shallowCopy);
@@ -377,3 +377,191 @@ const deepCopy1 = JSON.parse(JSON.stringify(hotelData));
 deepCopy1.details.rooms = 200;
 console.log("Original:", hotelData);
 console.log("Deep copy 1:", deepCopy1);
+
+
+
+/* ================================================
+   WHAT ARE ARRAY METHODS?
+   ================================================ */
+
+/*
+Array methods are functions that work with arrays:
+- Accessor: Read data without changing the original array
+- Iterator: Loop through elements and process them
+- Mutator: Modify the original array
+
+Think of them as different hotel management tools:
+- Accessor: Check room status without changing anything
+- Iterator: Visit each room to collect information
+- Mutator: Actually modify room assignments
+*/
+
+console.log("=== ARRAY METHODS DEMONSTRATION ===");
+
+/* ================================================
+   1. ACCESSOR METHODS (Don't change original array)
+   ================================================ */
+
+console.log("--- 1. ACCESSOR METHODS ---");
+
+const hotelRooms = [101, 102, 103, 104, 105];
+const amenities = ['wifi', 'pool', 'spa', 'gym'];
+
+// slice() - Extract portion of array
+const firstThreeRooms = hotelRooms.slice(0, 3);
+console.log("Original rooms:", hotelRooms);
+console.log("First 3 rooms:", firstThreeRooms);
+
+// concat() - Combine arrays
+const moreAmenities = ['restaurant', 'parking'];
+const allAmenitiesConcat = amenities.concat(moreAmenities);
+console.log("Combined amenities:", allAmenitiesConcat);
+
+// indexOf() - Find position of element
+const poolIndex = amenities.indexOf('pool');
+console.log("Pool is at index:", poolIndex);
+
+// includes() - Check if element exists
+const hasWifi = amenities.includes('wifi');
+console.log("Has wifi:", hasWifi);
+
+// join() - Convert array to string
+const amenityList = amenities.join(', ');
+console.log("Amenity list:", amenityList);
+
+/* ================================================
+   2. ITERATOR METHODS (Process each element)
+   ================================================ */
+
+console.log("\n--- 2. ITERATOR METHODS ---");
+
+const hotels = [
+  { name: 'Grand Plaza', price: 200, rating: 4.5 },
+  { name: 'Budget Inn', price: 80, rating: 3.2 },
+  { name: 'Luxury Resort', price: 350, rating: 4.8 }
+];
+
+// forEach() - Execute function for each element
+console.log("forEach - List all hotels:");
+hotels.forEach(hotel => {
+  console.log(`${hotel.name}: $${hotel.price}`);
+});
+
+// map() - Transform each element
+const hotelNames = hotels.map(hotel => hotel.name);
+console.log("Hotel names:", hotelNames);
+
+const pricesWithTaxes = hotels.map(hotel => hotel.price * 1.1);
+console.log("Prices with tax:", pricesWithTaxes);
+
+// filter() - Get elements that match condition
+const expensiveHotels = hotels.filter(hotel => hotel.price > 150);
+console.log("Expensive hotels:", expensiveHotels);
+
+// find() - Get first element that matches
+const budgetHotel = hotels.find(hotel => hotel.price < 100);
+console.log("Budget hotel:", budgetHotel);
+
+// reduce() - Reduce array to single value
+const totalRevenue = hotels.reduce((sum, hotel) => sum + hotel.price, 0);
+console.log("Total revenue:", totalRevenue);
+
+const averageRating = hotels.reduce((sum, hotel) => sum + hotel.rating, 0) / hotels.length;
+console.log("Average rating:", averageRating.toFixed(1));
+
+
+/* ================================================
+   3. MUTATOR METHODS (Change original array)
+   ================================================ */
+
+console.log("\n--- 3. MUTATOR METHODS ---");
+
+const roomNumbers = [101, 102, 103];
+console.log("Original room numbers:", roomNumbers);
+
+// push() - Add to end
+roomNumbers.push(104);
+console.log("After push(104):", roomNumbers);
+
+// pop() - Remove from end
+const removedRoom = roomNumbers.pop();
+console.log("Removed room:", removedRoom);
+console.log("After pop():", roomNumbers);
+
+// unshift() - Add to beginning
+roomNumbers.unshift(100);
+console.log("After unshift(100):", roomNumbers);
+
+// shift() - Remove from beginning
+const firstRoom = roomNumbers.shift();
+console.log("Removed first room:", firstRoom);
+console.log("After shift():", roomNumbers);
+
+// splice() - Add/remove elements at any position
+const guestList = ['John', 'Mary', 'Bobyy'];
+console.log("Original guests:", guestList);
+
+guestList.splice(1, 1, 'Alice', 'Lucky'); // Remove 1 at index 1, add Alice and Charlie
+console.log("After splice:", guestList);
+
+// sort() - Sort elements
+const prices = [200, 80, 350, 150];
+console.log("Original prices:", prices);
+
+prices.sort((a, b) => a - b); // Sort ascending
+console.log("Sorted prices:", prices);
+
+// reverse() - Reverse array order
+const floors = [1, 2, 3, 4];
+console.log("Original floors:", floors);
+
+floors.reverse();
+console.log("Reversed floors:", floors);
+
+/* ================================================
+   4. METHOD CHAINING
+   ================================================ */
+
+console.log("\n--- 4. METHOD CHAINING ---");
+
+const hotelDataNYC = [
+  { name: 'Grand Plaza', price: 200, rating: 4.5, city: 'NYC' },
+  { name: 'Budget', price: 80, rating: 3.2, city: 'NYC' },
+  { name: 'Luxury Resorts', price: 350, rating: 4.8, city: 'Miami' },
+  { name: 'City Hotel', price: 150, rating: 4.1, city: 'NYC' }
+];
+
+// Chain multiple methods together
+const nycHotelNames = hotelDataNYC
+  .filter(hotel => hotel.city === 'NYC')
+  .filter(hotel => hotel.rating >= 4.0)
+  .map(hotel => hotel.name)
+  .sort();
+
+console.log("High-rated NYC hotels:", nycHotelNames);
+
+/*
+ARRAY METHOD CATEGORIES:
+
+ACCESSOR METHODS (Don't change original):
+- slice() - Extract portion
+- concat() - Combine arrays
+- indexOf() - Find position
+- includes() - Check existence
+- join() - Convert to string
+
+ITERATOR METHODS (Process elements):
+- forEach() - Execute function for each
+- map() - Transform each element
+- filter() - Get matching elements
+- find() - Get first match
+- reduce() - Reduce to single value
+
+MUTATOR METHODS (Change original):
+- push() - Add to end
+- pop() - Remove from end
+- unshift() - Add to beginning
+- shift() - Remove from beginning
+- splice() - Add/remove at position
+- sort() - Sort elements
+- reverse() - Reverse order */
