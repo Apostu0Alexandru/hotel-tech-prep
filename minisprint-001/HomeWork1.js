@@ -663,10 +663,6 @@ bookHotel('H002')
     console.log('Error:', error);
   });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c9f6874 (update)
 /* ================================================
    WHAT IS ASYNC/AWAIT?
    ================================================ */
@@ -723,6 +719,35 @@ async function handleBooking() {
 }
 
 handleBooking();
+
+// Robust error handling for backend operations
+async function safeApiCall(operation, fallbackValue = null) {
+  try {
+    const result = await operation();
+    return { success: true, data: result, error: null };
+  } catch (error) {
+    console.error('Operation failed:', error.message);
+    return { success: false, data: fallbackValue, error: error.message };
+  }
+}
+
+/* ================================================
+   Database style example
+   ================================================ */
+
+// Clean async function usage
+async function fetchUserData() {
+  try {
+    const user = await getUserById(1);
+    console.log('User fetched:', user);
+    return user;
+  } catch (error) {
+    console.error('Failed to fetch user:', error.message);
+    throw error;
+  }
+}
+
+fetchUserData();
 
 /* ================================================
    3. SEQUENTIAL vs PARALLEL
