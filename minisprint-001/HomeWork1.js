@@ -664,10 +664,6 @@ bookHotel('H002')
   });
 
 
-// HomeWork1.js - MiniSprint 001: TypeScript Fundamentals
-// Author: [Your Name]
-// Date: June 01, 2025
-// Topic: 1.7 Async/Await
 
 /* ================================================
    WHAT IS ASYNC/AWAIT?
