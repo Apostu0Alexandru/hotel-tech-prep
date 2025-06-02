@@ -664,10 +664,7 @@ bookHotel('H002')
   });
 
 
-// HomeWork1.js - MiniSprint 001: TypeScript Fundamentals
-// Author: [Your Name]
-// Date: June 01, 2025
-// Topic: 1.7 Async/Await
+
 
 /* ================================================
    WHAT IS ASYNC/AWAIT?
@@ -987,3 +984,36 @@ USEREF (Hotel Safe):
 - No re-renders triggered
 - Use for: tracking counters, form focus, timers
 - Syntax: const ref = useRef(initialValue) */
+
+console.log("\n--- 3. PROMISE CHAINING ---");
+
+function fetchUser(id) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({ id, name: 'YB', profileId: 123 });
+    }, 200);
+  });
+}
+
+function fetchProfile(profileId) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({ id: profileId, bio: 'BIO' });
+    }, 300);
+  });
+}
+
+
+// Promise chaining (solving callback hell)
+fetchUser(1)
+  .then(user => {
+    console.log('User fetched:', user);
+    return fetchProfile(user.profileId);
+  })
+  .then(profile => {
+    console.log('Profile fetched:', profile);
+    return fetchSettings(1);
+  })
+  .catch(error => {
+    console.log('Error in chain:', error.message);
+  });
