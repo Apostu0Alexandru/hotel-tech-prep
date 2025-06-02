@@ -697,6 +697,18 @@ async function bookRoom() {
 
 bookRoom().then(console.log);
 
+// Basic async function - always returns a Promise
+async function fetchUserData() {
+  return { id: 1, name: 'Clem' };
+}
+
+
+async function getUserWithDetails() {
+  const user = await fetchUserData();
+  return { ...user };
+
+
+}
 /* ================================================
    2. ERROR HANDLING
    ================================================ */
@@ -721,6 +733,27 @@ async function handleBooking() {
 }
 
 handleBooking();
+
+function riskyOperation() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      Math.random() > 0.5 ? resolve('Success') : reject(new Error('Operation failed'));
+    }, 400);
+  });
+}
+
+// Proper error handling pattern for NestJS
+async function safeDataFetch() {
+  try {
+    const result = await riskyOperation();
+    console.log('Operation succeeded:', result);
+    return { success: true, data: result };
+  } catch (error) {
+    console.error('Operation failed:', error.message);
+    return { success: false, error: error.message };
+  }
+}
+
 
 /* ================================================
    3. SEQUENTIAL vs PARALLEL
@@ -811,6 +844,8 @@ async function findHotels(city) {
 }
 
 findHotels('NYC');
+
+
 
 console.log("\n=== ASYNC/AWAIT COMPLETE ===");
 
