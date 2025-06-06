@@ -1,0 +1,20 @@
+# Node.js dependencies
+node_modules/
+
+# TypeScript compiled output
+dist/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+
+# IDEs and editors
+.vscode/
+
+# Temporary files
+tmp/
