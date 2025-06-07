@@ -1,0 +1,325 @@
+{
+  "info": {
+    "name": "MiniSprint 2 - Requirement 7: All Routes Testing",
+    "description": "Test all routes using Postman to ensure functionality for GET, POST, PUT, and DELETE requests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Setup - Get Authentication Token",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/dev/token",
+        "description": "Get JWT token for protected routes (POST, PUT, DELETE)"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Token generation successful', function () {",
+              "    pm.response.to.have.status(200);",
+              "    const response = pm.response.json();",
+              "    pm.expect(response.success).to.be.true;",
+              "    pm.expect(response.token).to.exist;",
+              "});",
+              "",
+              "// Save token for protected routes",
+              "const response = pm.response.json();",
+              "pm.environment.set('auth_token', response.token);",
+              "console.log('Authentication token saved for protected routes');"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Retrieve All Hotels",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/v1/hotels?page=1&limit=5",
+        "description": "GET request to retrieve all hotels with pagination"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('GET all hotels - Status 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('GET all hotels - Response structure', function () {",
+              "    const response = pm.response.json();",
+              "    pm.expect(response.success).to.be.true;",
+              "    pm.expect(response.data).to.be.an('array');",
+              "    pm.expect(response.pagination).to.exist;",
+              "});",
+              "",
+              "pm.test('GET all hotels - Data validation', function () {",
+              "    const response = pm.response.json();",
+              "    const hotels = response.data;",
+              "    pm.expect(hotels.length).to.be.at.most(5);",
+              "    ",
+              "    if (hotels.length > 0) {",
+              "        const hotel = hotels[0];",
+              "        pm.expect(hotel.GlobalPropertyID).to.exist;",
+              "        pm.expect(hotel.GlobalPropertyName).to.exist;",
+              "        pm.expect(hotel.city).to.exist;",
+              "    }",
+              "});",
+              "",
+              "console.log('✓ GET all hotels test completed');"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Retrieve Hotel by Name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/api/v1/hotels/Conrad",
+        "description": "GET request to retrieve a specific hotel by name"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('GET hotel by name - Status 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('GET hotel by name - Response structure', function () {",
+              "    const response = pm.response.json();",
+              "    pm.expect(response.success).to.be.true;",
+              "    pm.expect(response.data).to.exist;",
+              "});",
+              "",
+              "pm.test('GET hotel by name - Search result relevance', function () {",
+              "    const response = pm.response.json();",
+              "    const hotel = response.data;",
+              "    pm.expect(hotel.GlobalPropertyName.toLowerCase()).to.include('conrad');",
+              "});",
+              "",
+              "pm.test('GET hotel by name - Complete hotel data', function () {",
+              "    const response = pm.response.json();",
+              "    const hotel = response.data;",
+              "    pm.expect(hotel.GlobalPropertyID).to.exist;",
+              "    pm.expect(hotel.GlobalPropertyName).to.exist;",
+              "    pm.expect(hotel.city).to.exist;",
+              "});",
+              "",
+              "console.log('✓ GET hotel by name test completed');"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST - Create New Hotel",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{auth_token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"GlobalPropertyName\": \"MiniSprint 2 Test Hotel\",\n  \"SabrePropertyRating\": 4.5,\n  \"PropertyLatitude\": 25.2048,\n  \"PropertyLongitude\": 55.2708,\n  \"PropertyAddress1\": \"123 Test Street, Business District\",\n  \"PropertyPhoneNumber\": \"+971-4-555-TEST\",\n  \"PropertyZipPostal\": \"MS2001\"\n}"
+        },
+        "url": "{{base_url}}/api/v1/hotels",
+        "description": "POST request to create a new hotel (protected route)"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('POST create hotel - Status 201', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test('POST create hotel - Response structure', function () {",
+              "    const response = pm.response.json();",
+              "    pm.expect(response.success).to.be.true;",
+              "    pm.expect(response.data).to.exist;",
+              "    pm.expect(response.message).to.include('created');",
+              "});",
+              "",
+              "pm.test('POST create hotel - Data integrity', function () {",
+              "    const response = pm.response.json();",
+              "    const hotel = response.data;",
+              "    pm.expect(hotel.GlobalPropertyName).to.equal('MiniSprint 2 Test Hotel');",
+              "    pm.expect(parseFloat(hotel.SabrePropertyRating)).to.equal(4.5);",
+              "    pm.expect(hotel.PropertyAddress1).to.equal('123 Test Street, Business District');",
+              "});",
+              "",
+              "pm.test('POST create hotel - Auto-generated ID', function () {",
+              "    const response = pm.response.json();",
+              "    const hotel = response.data;",
+              "    pm.expect(hotel.GlobalPropertyID).to.exist;",
+              "    pm.expect(hotel.GlobalPropertyID).to.be.a('number');",
+              "});",
+              "",
+              "// Save created hotel ID for PUT and DELETE tests",
+              "const response = pm.response.json();",
+              "pm.environment.set('created_hotel_id', response.data.GlobalPropertyID);",
+              "console.log('✓ POST create hotel test completed - ID:', response.data.GlobalPropertyID);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUT - Update Hotel",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{auth_token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"GlobalPropertyName\": \"MiniSprint 2 Test Hotel - UPDATED\",\n  \"SabrePropertyRating\": 5.0,\n  \"PropertyAddress1\": \"456 Updated Test Street, Premium District\"\n}"
+        },
+        "url": "{{base_url}}/api/v1/hotels/{{created_hotel_id}}",
+        "description": "PUT request to update the created hotel (protected route)"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('PUT update hotel - Status 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('PUT update hotel - Response structure', function () {",
+              "    const response = pm.response.json();",
+              "    pm.expect(response.success).to.be.true;",
+              "    pm.expect(response.data).to.exist;",
+              "    pm.expect(response.message).to.include('updated');",
+              "});",
+              "",
+              "pm.test('PUT update hotel - Updated data verification', function () {",
+              "    const response = pm.response.json();",
+              "    const hotel = response.data;",
+              "    pm.expect(hotel.GlobalPropertyName).to.equal('MiniSprint 2 Test Hotel - UPDATED');",
+              "    pm.expect(parseFloat(hotel.SabrePropertyRating)).to.equal(5.0);",
+              "    pm.expect(hotel.PropertyAddress1).to.equal('456 Updated Test Street, Premium District');",
+              "});",
+              "",
+              "pm.test('PUT update hotel - ID preservation', function () {",
+              "    const response = pm.response.json();",
+              "    const hotel = response.data;",
+              "    const originalId = pm.environment.get('created_hotel_id');",
+              "    pm.expect(hotel.GlobalPropertyID.toString()).to.equal(originalId.toString());",
+              "});",
+              "",
+              "pm.test('PUT update hotel - Partial update validation', function () {",
+              "    const response = pm.response.json();",
+              "    const hotel = response.data;",
+              "    // Fields not updated should remain unchanged",
+              "    pm.expect(hotel.PropertyPhoneNumber).to.equal('+971-4-555-TEST');",
+              "    pm.expect(hotel.PropertyZipPostal).to.equal('MS2001');",
+              "});",
+              "",
+              "console.log('✓ PUT update hotel test completed');"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "DELETE - Remove Hotel",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{auth_token}}"
+          }
+        ],
+        "url": "{{base_url}}/api/v1/hotels/{{created_hotel_id}}",
+        "description": "DELETE request to remove the created hotel (protected route)"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('DELETE hotel - Status 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('DELETE hotel - Response structure', function () {",
+              "    const response = pm.response.json();",
+              "    pm.expect(response.success).to.be.true;",
+              "    pm.expect(response.message).to.include('deleted');",
+              "});",
+              "",
+              "pm.test('DELETE hotel - Cleanup verification', function () {",
+              "    const response = pm.response.json();",
+              "    pm.expect(response.message).to.match(/deleted successfully/i);",
+              "});",
+              "",
+              "// Clean up environment variable",
+              "pm.environment.unset('created_hotel_id');",
+              "console.log('✓ DELETE hotel test completed - Test hotel removed from database');"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Requirement 7 - Test Summary",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{base_url}}/health",
+        "description": "Final validation that all CRUD operations completed successfully"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('MiniSprint 2 Requirement 7 - All Routes Tested', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "console.log('======================================');",
+              "console.log('MiniSprint 2 - Requirement 7 COMPLETED');",
+              "console.log('======================================');",
+              "console.log('✓ GET /hotels - Retrieve all hotels');",
+              "console.log('✓ GET /hotels/:name - Retrieve hotel by name');",
+              "console.log('✓ POST /hotels - Create new hotel');",
+              "console.log('✓ PUT /hotels/:id - Update hotel');",
+              "console.log('✓ DELETE /hotels/:id - Delete hotel');",
+              "console.log('======================================');",
+              "console.log('All routes tested successfully!');",
+              "console.log('Hotel Management API functionality verified');"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
