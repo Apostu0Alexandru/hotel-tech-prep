@@ -1,6 +1,3 @@
--- database/scripts/import_sabre_data.sql
--- MiniSprint 2: Import Sabre CSV data with correct TAB delimiter and BOM handling
-
 \c hotel_management_db;
 
 -- Create staging table matching exact Sabre CSV headers
