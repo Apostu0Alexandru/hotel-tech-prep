@@ -1,0 +1,48 @@
+In essence, REST defines what your API should look like, while NestJS provides the tools and structure
+to build it efficiently with enterprise-grade
+features like dependency injection, testing frameworks, and scalable architecture patterns.
+
+            Key Differences
+Aspect	REST	                                                            NestJS
+Type	Architectural pattern	                                        Development framework
+Purpose	Defines API design principles	                                Provides development tools and structure
+Implementation	Can be implemented in any language/framework	        Specific to Node.js/TypeScript
+Scope	API design methodology	                                        Full application development platform
+State Management	Stateless by design	                                Framework handles state through dependency injection
+
+
+REST: The Rules of the Game
+Think of REST as the "grammar" of web APIs. It's not code you install
+- it's a set of conventions that make your APIs predictable and intuitive:
+text
+GET /api/users          # Get all users
+GET /api/users/123      # Get specific user
+POST /api/users         # Create new user
+PUT /api/users/123      # Update entire user
+PATCH /api/users/123    # Partial update
+DELETE /api/users/123   # Remove user
+
+What I love about REST:
+Predictable: Once you know REST, any well-designed API feels familiar
+HTTP-native: Leverages what HTTP already gives us (status codes, methods, headers)
+Cacheable: GET requests can be cached naturally
+Language agnostic: Works with Python Flask, Java Spring, Node Express, whatever
+
+
+NestJS: The Developer Experience Framework
+
+Why I choose NestJS for serious projects:
+Dependency Injection: No more manually wiring dependencies or singleton hell
+TypeScript-first: Catch errors at compile time, not in production
+Modular by design: Code organization that scales with team size
+Decorator magic: Less boilerplate, more expressiveness
+Enterprise-ready: Built-in support for testing, logging, validation, auth
+
+
+Here's what actually happens in practice:
+Small project or prototype? I'll grab Express and build a REST API in 30 minutes
+Production app with a team? NestJS every time
+
+Bottom Line
+REST = The architectural style that makes your API intuitive
+NestJS = The framework that makes building REST APIs (or GraphQL) a joy
