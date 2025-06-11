@@ -1,0 +1,194 @@
+review_id,hotel_id,username,title,content,overall_rating,review_date,helpful_votes,platform
+1,1,Lenuta,Wonderful stay !,"Friendly staff , great customer service skills I am sorry to say it , but the property is in need of a bit of an update. Dear Lenuta,
+
+Thank you so much for taking the time to...",5.0,2024-01-15,0,booking_focused
+2,1,Gabriel,Very good,"The property is in significant need of an upgrade Dear Gabriel,
+
+We very much appreciate your rating...",4.0,2024-01-15,0,booking_focused
+3,1,Pensa,liz,"The huge hotel room and the location, it is close to the romexpo which made it perfect for the comic con event. Dear Pensa,
+
+We very much appreciate your comments...",5.0,2024-01-15,0,booking_focused
+4,1,Hassan,Very good,"They offered me late checkout thanks Dear Hassan,
+
+Thank you so much for your lovely feedback!...",4.0,2024-01-15,0,booking_focused
+5,1,Dmitrijs,Very good,"Breakfast is good windows can't be opened, no fresh air Dear Dmitrijs,
+
+We very much appreciate your comments...",4.0,2024-01-15,0,booking_focused
+6,1,Pavel,Superb,"great breakfast, nice size of the room, enjoyable one person in the morning at reception, I think it does not make it very smooth check out... Dear Pavel,
+
+We very much appreciate your comments...",4.5,2024-01-15,0,booking_focused
+7,1,Terry,Ciprian at front desk provided great service.,"Great selection.  Coffee could be richer and hotter. Dear Terry,
+
+We very much appreciate your comments...",4.5,2024-01-15,0,booking_focused
+8,1,Isabela,Wonderful hotel! Great location! Excellent breakfast!,"Everything was perfect! But most of all I have really enjoyed the breakfast! A wide variety of food,  I couldn't have asked for more!!! Congratulations! Wonderful place to stay! Dear Guest,
+We very much appreciate your comments...",5.0,2024-01-15,0,booking_focused
+9,1,Mihaela,Superb,"Close to airport with transport that can be booked at a convenient price.
+Receptionist was very nice and kind .
+Restaurant food was excellent and the same the drinks. Dear Guest,
+We very much appreciate your comments...",4.5,2024-01-15,0,booking_focused
+10,1,Gabriel,Exceptional,"The frontdesk staff was very friendly! Dear Guest,
+We very much appreciate your comments...",5.0,2024-01-15,0,booking_focused
+11,2,Roman,Very grate and new experience. Unforgettable time spending with my lovely 🥰🫶baby girl,"All Nil Tnks very much for your feedback
+We are glad that you...",5.0,2024-01-15,0,booking_focused
+12,2,Stefana,A fun way to spend a night in Bucharest,"- Everything felt very clean
+- Plenty of fun activities in the room
+- Friendly meet and greet (although, it was a bit weird that we were having the conversation and payment inside the room)
+- Parking was convenient, right in front of the hotel - We had a small issue with the Jacuzzi leaking
+- Wifi was slow; also they kept the long and complicated default password for some reason (could be changed or at least have a QR code to connect directly)
+- I wish the bathroom also had the option for some c",5.0,2024-01-15,0,booking_focused
+13,2,Barry,Exceptional,"We had an absolutely fantastic time hear, it was our first time in a room like this. I would highly recommend it. Super clean room and amazing staff",5.0,2024-01-15,0,booking_focused
+14,2,Eli,Exceptional,Host very kind. Room clean and very comfortable Tnks very much for the positive feedback,5.0,2024-01-15,0,booking_focused
+15,2,Dumitru,Exceptional,"Very clean...everything was excellent... Thank you for your positive feedback
+ We are glad to hear...",5.0,2024-01-15,0,booking_focused
+16,2,Sean,Host was very polite and helpful and provided everything  we asked for will definitely book again an,"Host was very polite and helpful and provided everything  we asked for will definitely book again and recommend for people to stay at apartment Nothing host and room was exceptional Thank you for your positive feedback🤗
+ We are glad to...",5.0,2024-01-15,0,booking_focused
+17,2,Magdalena,Everything was amazing,"The room was exactly as advertised! It was was extremely clean, there are glasses for water and champagne. There is a mini fridge and we also had two bottles of water. The jacuzzi is very nice and very spacious. The host was really nice and welcoming Nothing Thank you for your positive feedback.    We are glad to...",5.0,2024-01-15,0,booking_focused
+18,2,Shay,Amazing room and service,"Absolutely amazing room. The host is lovely, trust worthy and extremely accommodating. Will book again. Everything was great. Thank you for your positive feedback.    We are glad to...",5.0,2024-01-15,0,booking_focused
+19,2,Martia,Exceptional,"The location was excellent as it was away from the city which made it better as it was nice and quiet, the host was the best she helped me with everything and told me were all the resturants was and how to get there she even helped out to get a birthday cake from my hubby as I surprised him for his birthday? We will be back within a couple of months definitely recommend. 😁 That here was no resturant for breakfast Thank you for your positive feedback.  We are glad to...",5.0,2024-01-15,0,booking_focused
+20,2,Lesley,"The host was extremely accommodating, they showed us to the room and the communication was excellent",The room was exactly as advertised. It was spotlessly clean. Everything was perfect,5.0,2024-01-15,0,booking_focused
+21,3,Gama,Exceptional,Excelent view Thank you Gama!,5.0,2024-01-15,0,booking_focused
+22,3,Catalin-ionut,Fantastic Stay with Stunning Views,"The apartment offers exceptional views from two balconies on the 18th floor—truly a highlight of the stay. The self check-in process was seamless and convenient. Inside, the living space is spacious and comfortable, featuring a large sofa and a dining table, perfect for relaxing or entertaining.
+ Its close proximity to the metro station made getting around the city incredibly easy.
+
+Clearly a hidden gem. N/A Hello dear customer. Thank you for your appreciation, and...",5.0,2024-01-15,0,booking_focused
+23,3,Jongsun,Clean,"The place was exceptionally clean, and the staff was very friendly and helpful. Very, very spacious apartment. We are happy to see that our customers are satisfied with...",4.5,2024-01-15,0,booking_focused
+24,3,Daniel,Exceptional,"I liked the fact that Ionuț was very helpful.
+10/10 for him and I hope his bosses appreciates him at his true value because he is very professional and acomodating. Thank you for your appreciation and your review!
+
+With...",5.0,2024-01-15,0,booking_focused
+25,3,Ecaterina,Just perfect for us,"The apartment is a nice place, and we enjoyed its comfort. For daily needs we went shopping and was very comforting to know that Budache Ionut was there to help us if we needed something. His ability to make the seemingly impossible possible is truly remarkable.",5.0,2024-01-15,0,booking_focused
+26,3,Guy,Perfect,"I had a blast at those apartments, they were roomy, well maintained and airy. The best thing about them was Ionut at the reception. He made sure everything was in order and that all our needs were taken care of The apartments are located in the southern side of Bucharest. The airport and most attractions (Therme, Edenland) are in the northern part. Driving through the city can be tiresome Hello. The comfort of our customers is one of our...",5.0,2024-01-15,0,booking_focused
+27,3,Pesah,"Really wonderful, sparkling clean, excellent apt","Wonderful stay, convenient check-in, very helpful and available host. Downstairs there’s a supermarket, pizza and burger. Location is not central so ideally you should be mobile, we were with a car so didn’t try moving around with public transport, it might not be a problem. Nothing Hello. Thank you for the review, we are pleased that the...",5.0,2024-01-15,0,booking_focused
+28,3,Popa,Exceptional,"All the best, thank you Team. Thank you very much for your review!",5.0,2024-01-15,0,booking_focused
+29,4,Mahmood,Great location,"The staff was so helpful; the location is outstanding. 
+The security in the hotel is beyond good, and free coffee is always nice. A slightly small room",5.0,2024-01-15,0,booking_focused
+30,4,Caroline,"Cool, modern, comfy","Room was small but had everything I needed including fridge kettle coffee maker. 
+ Nice REN products in bathroom and LOVED the mini-Oatly’s in the room. 
+Great location, simple with codes to get in etc 
+Clean, quiet No breakfast on site",5.0,2024-01-15,0,booking_focused
+31,4,Olivia,We won’t stay anywhere else when we visit Paris!!,"Everything. The ease of checking in, the space in the room, the cleanliness, the location! Can’t fault this property! N/A",5.0,2024-01-15,0,booking_focused
+32,4,Mihaela,Exceptional,"A wonderful stay in the heart of the city
+
+I had a great experience staying at this hotel. The place was spotless and very well maintained. The staff were kind, helpful, and always welcoming. The location is perfect — right in the city center, making it incredibly convenient for walking around and exploring.
+
+Each door is secured with a code, which made me feel very safe throughout my stay. The atmosphere is calm and comfortable, and I truly enjoyed every moment there. I would highly recommend t",5.0,2024-01-15,0,booking_focused
+33,4,Irina,So happy for my choice with this hotel!,"Clean, modern, perfect location.",5.0,2024-01-15,0,booking_focused
+34,4,Lim,Overall it was great,"1) Clean, decent sized for 2 person (by city standards)
+2) Friendly staff on duty at office hour 
+3) Lobby and Laundry room at level G
+4) Next to nice steakhouse and a mini market; and near main shopping belt 
+5) Coffee and toiletries 1) no nice view - I guess my fault as I booked late and not much room options left 
+2) too many electronic locks - I need to enter 5 times to get into my room, and need to push / pull hard the door to open (which became easier after doing few times / with familiari",4.0,2024-01-15,0,booking_focused
+35,4,Ouedherfi,Exceptional,"Very convenient ,close to everything .
+Very safe, friendly staff .",5.0,2024-01-15,0,booking_focused
+36,4,Mira,Outstanding service location and kindly informed by the staff . Cheers to Sofiene .,"Everything except we came early and the big lockers were already used and we couldn’t live our luggages before check in.
+We used the PIN number and went trough the building and found Help with a OUTSTANDING WOMEN Nadia her name , she was getting ready our bedroom and we found a solution.
+Cheers to Nadia .
+The location is absolutely beautiful. Thé noise … constructions around but we were informed and we used the earbuds",5.0,2024-01-15,0,booking_focused
+37,4,Karen,We will be back! Loved our stay with you,My husband and I stayed here for our 30th wedding anniversary and it was simply amazing.  This property is in a brilliant location so close metro station and within walking distance to a lot of the major sights.  The property was spotless with everything you could ask for.  The wee balcony was a lovely feature.  We found beautiful restaurants within a short walk and personally didn’t find them too expensive.  We would return here in a heartbeat and can’t wait to visit Paris and stay with you aga,5.0,2024-01-15,0,booking_focused
+38,4,Norma,Wonderful,"Central location, near Eiffel Tower, Les Invalides, Petit Palais, Champ D’Elyse. Easy and close to Métro. Great food! Nothing, all good",5.0,2024-01-15,0,booking_focused
+39,5,Andreas,Nice apartment close to the city,The look of the apartment was very nice and the location was great for getting fast to any destination in the city as well as CDG. You hear the guests in the other apartments quite loud. Especially the guests above were very loud until after 12 o’clock in the first night. NC headphones or similar are recommended Thank you for your feedback! We’re glad you enjoyed the...,3.5,2024-01-15,0,booking_focused
+40,5,Glushenkov,Overall it was a great experience staying there,The location is great and the apartment is very good There is no elevator and they charge additional fee for clean sheets Thank you for your feedback! We’re happy you enjoyed the...,4.0,2024-01-15,0,booking_focused
+41,5,Helene,Superb,"Great location, close to Metro, shops, cafes, attractions and restaurants
+Well equipped kitchen. Staff were extremely helpful and kind. Nothing really Thank you so much for your kind words! We’re happy you...",4.5,2024-01-15,0,booking_focused
+42,5,Huiming,Superb,The location is great and very convenient to go anywhere. The bathroom sink did not work well. Water went down very slowly. Thank you for your feedback! The location is indeed great...,4.5,2024-01-15,0,booking_focused
+43,5,Olivia,Would absolutely book again,"Very simple process, front desk people are always available to contact, & very convenient to have a kitchen/washing machine to ourselves so we could cook or clean anything we needed to. The location is ideal with all the amazing restaurants, convenient metro stations, many other things to do, & a bodega type of corner store right by the apartments. Also loved not having a key & just using codes to get in. Slightly smaller than expected but perfectly fine. I also think it would've been helpful to",4.5,2024-01-15,0,booking_focused
+44,5,Susan,Excellent place to stay,"The apartment was very nice, easy access to the metro or could easily walk to other areas of town.  Hosts were very helpful Thank you for your feedback! We are glad you found the...",4.5,2024-01-15,0,booking_focused
+45,5,Evgeny,"Good option in the city centre, no car next time","Walking distance to many sights Parking difficulties We appreciate your feedback! Being in the city center,...",4.0,2024-01-15,0,booking_focused
+46,5,Jamie,The apartment was good overall but was priced too high for what it offered.,"The apartment was spacious and fairly quiet. The location was great for metro stations nearby. Noisy upstairs neighbour and a lack of basic kitchen items, which I had to buy myself. Dear Jamie,  
+
+Thank you for staying with us for so long!...",4.0,2024-01-15,0,booking_focused
+47,5,Belinda,Comfortable and good location. Very friendly staff for checkin.,Comfortable and good location. Very friendly staff for checkin. Terrible smell from bathroom drain and dishwasher (which we didn’t use) Thank you for your feedback! We're glad you found the...,3.5,2024-01-15,0,booking_focused
+48,5,Yi,Quite comfortable,"Close to some attractions, handy to have washing machine, dishwasher and good amount of cooking utensils. The shower drains are very slow, gets blocked up easily before showers can be done. If there’s housekeeping services every other day will be good, as the place does get dusty. Hello,
+
+Thank you for your feedback! It’s unfortunate...",3.5,2024-01-15,0,booking_focused
+49,6,Antoinette,Fantastic room with a view,"Great location, clean room.  Communication was awesome as we had to leave before shop opened to return key.
+Owner allowed key to be left on table.   Lovely studio.  Electric blinds were great. The lift is very small 1 person with luggage or 2 people.  You have to pick keys up from shop down the road.
+Pillows on bed could of been thicker, and maybe more than one pillow each.",4.0,2024-01-15,0,booking_focused
+50,6,Keisha,Best view in Paris!!,"Loved the view, location and neatness of the apartment. The mechanical blinds surprised me!! It had just enough of everything you’d need for a short trip. Would stay again!! Due to the road blocked off at the Trocadéro for Olympics, it was not clear how to reach the pick up site. We had this arduous long walk with our luggage to and fro. Taxis advised they could not take us. I think in a case as such, I think the host should have advised us exactly how to get there due to the obstruction.",5.0,2024-01-15,0,booking_focused
+51,6,Reyhan,Breathtaking Eiffel Tower Views and a Perfect Parisian Stay,"Our stay near the Eiffel Tower in Paris was truly memorable, thanks to several standout features of the room we chose at Guest Ready. The room boasted beautiful views of the Eiffel Tower, and the shutter system for the windows created a picturesque opening to see the tower in all its glory. The room itself was spacious and well-equipped, with amenities like an iron, stove, fridge, kettle, and all necessary cutlery, all spotlessly clean.
+
+The bathroom was exceptionally clean and fully stocked wit",5.0,2024-01-15,0,booking_focused
+52,6,Barbosa,É um local incrível com uma vista maravilhosa para a torre eifel,"A localização do imóvel, a limpeza do ambiente e a recepção",5.0,2024-01-15,0,booking_focused
+53,6,Heloar,Maravilhosa!! Foi um sonho realizado!!,"A localização é muito boa !! Irei sentir falta de dormir olhando para a torre Não tenho nada a reclamar, me atendeu super bem !! Ótima localização e vista deslumbrante",5.0,2024-01-15,0,booking_focused
+54,6,Jeonggyu,Superb,"트로카데로 광장에서 1분거리에 위치하고 있으며, 숙소의 침대에 누워서도 에펠탑이 보이는 환상적인 숙소입니다. 숙소의 마그네틱 키와 관련해서 문제가 발생했으나, 숙소에서 대체 숙소를 구해줬습니다. 온전하게 전체 숙박기간동안 숙소를 사용하지 못한게 아쉬웠습니다.",4.5,2024-01-15,0,booking_focused
+55,6,Marjolijne,Fantastisch uitzicht en ligging.,Het uitzicht en de ligging Sommige meubels waren stukjes afgebroken en vriezer zat vol ijs.,4.5,2024-01-15,0,booking_focused
+56,6,Bukin,"Alles was ihr aus den Fenstern sehen könnt , traumhaft.","Aussicht ist traumhaft. Viel Restaurants drum herum vor Ort. Den Schlüssel zu bekommen und abzugeben ist kompliziert. Man muss rechnen mit allen Koffern zu einem Laden zu laufen , um den Schlüssel zu holen. Die Abgabe ist genauso kompliziert. Wir haben erst eine falsche Adresse mit Foto  in einem komischen Asialaden bekommen. Es gibt viel zu erzählen, aber es soll schneller und einfacher funktionieren. Z.b. Ein Kasten mit einem Kennwort vor Ort oder was anderes.",4.5,2024-01-15,0,booking_focused
+57,6,Sofia,Pleasant,"Localização e da vista para a torre Funcionário da loja super antipático e incompetente. Sem qualquer conhecimento de nada. 2 toalhas de banho para uma semana de estadia. 1 rolo papel higiénico para uma semana. Nao houve limpeza. Ja para não falar do calor insuportável no quarto à noite.
+
+Interior do edifício completamente degradado. Hi Ana Sofia,
+
+Thank you for sharing your feedback. We...",3.0,2024-01-15,0,booking_focused
+58,6,Davis,Very good,There are no comments available for this review,4.0,2024-01-15,0,booking_focused
+59,7,William,Exceptional,exactly as seen in the photographs and superb location slightly noisy as we had the windows open due to the heat. however did not affect the quality of the apartment,5.0,2024-01-15,0,booking_focused
+60,7,Michael,"Stayed here for a night, the accommodation is beautiful and comes with a perfect location in Paris, ","Perfect location , beautiful apartment",5.0,2024-01-15,0,booking_focused
+61,7,Hassan,beautiful luxury apartment,the place has all what you need for ur stay and with beautiful and clean furniture and the location is near of everything all was good,5.0,2024-01-15,0,booking_focused
+62,7,Sophie,Poor,"Das Apartment, welches auf den Bildern zu sehen ist, hätte unsere Erwartungen sicher übertroffen, doch leider hatte es einen ""Wasserschaden"". Aufgrund schlechter Kommunikation mit dem Host, haben wir sein Ausweich-Apartment, zu dem wir keinerlei Informationen bekommen haben außer der Adresse, bezogen. Da wir bereits die Befürchtung hatten, dass wir von ihm sonst keine Rückerstattung des bereits bezahlten Apartments bekommen würden. Der Aufenthalt in diesem Apartment war definitiv niemals verglei",3.0,2024-01-15,0,booking_focused
+63,7,Nina,Erwartungen erfüllt,"Ich hatte mit meinem Freund eine super Zeit, alles war wie auf den Bildern und hat unserer Erwartungen erfüllt. Zudem sehr sauber!",5.0,2024-01-15,0,booking_focused
+64,7,Lasse,Sehr sauber,Die Unterkunft war sauber und wie beschrieben. Zudem hat der Check-In gut geklappt und wir haben vom Inhaber tolle tipps zur umgebung bekommen.,5.0,2024-01-15,0,booking_focused
+65,7,Martin,Supa,"Die Wohnung war sauber, gut ausgestattet und sehr komfortabel. Der Check-in verlief reibungslos und der Gastgeber war sehr freundlich und hilfsbereit. Zudem erhielten wir hervorragende Tipps für Restaurants und Sehenswürdigkeiten in der Umgebung.",5.0,2024-01-15,0,booking_focused
+66,7,Anjia,Sehr gut,"Wir hatten einen wunderbaren Aufenthalt in diesem luxuriösen Apartment. Die Lage ist unschlagbar – nur wenige Schritte vom Arc de Triomphe entfernt. Die Wohnung war sauber, gut ausgestattet und sehr komfortabel. Der Check-in verlief reibungslos und der Gastgeber war sehr freundlich und hilfsbereit. Wir können dieses Apartment nur wärmstens empfehlen!",5.0,2024-01-15,0,booking_focused
+67,7,Stefan,Apartment mangelhaft. Perfekte Lage,"Die Lage ist perfekt am Arc de Triomphe. Man fällt die Tür raus und steht in der Metro. Zentraler geht’s nicht. Essen, Trinken & Einkaufen nebenan oder in Max. 5 Minuten. Um den Eiffelturm aus dem Apartment zu sehen, muss man sich  schon arg aus dem Fenster lehnen. 
+Einrichtung nett - aber schon in die Jahre gekommen. Der Teppich schon fleckig und eher für den Hund oder Pferd. Vorhergehende Bewertungen passen da sehr gut. Küche gebucht und erst nach Check-In eine Nachricht erhalten, dass Abfluss",3.0,2024-01-15,0,booking_focused
+68,7,Tiziana,Buona posizione ma pessima attenzione all'igiene,"La posizione è gli spazi Pessima igiene, lenzuola sporche, posate sporche, il pavimento sporco. Il bagno senza sapone e lavandino rotto. Niente phone per i capelli. Macchina del caffè rotta. Zero 
+Pessima pulizia",5.0,2024-01-15,0,booking_focused
+69,8,Zainulabden,Pleasant,Very good location but there is some humidity because it is located on the sixth floor and without an elevator,3.0,2024-01-15,0,booking_focused
+70,8,Lucie,I recommend this flat.,"Location excellent - metro no4 2 min, clean, microwave+kettle, hairdryer, 2 ventilators, beds very comfortable 6. floor-108stairs, not many dishes for cooking, missing table for eating, WC with small place for legs, high temperature in the afternoon",4.0,2024-01-15,0,booking_focused
+71,8,Faton,Not recommended for family due ti hygiene reasons!,"Very small, very dirty Carpet/rug 
+The entrance and the floor was disgusting. Smells bad, even in the apartment. 
+There is nothing where you can hang your Clothes, you have to leave it on the floor 
+
+There is no Coffee machine 
+There are 102 stairs before you reach the apartment They don’t tell you till you pay and till you get there, that you have to go 15 min walk to get the Keys and then when you come to apartment, you find a broken door that they repaired it but not good.
+It’s perfect locati",3.0,2024-01-15,0,booking_focused
+72,8,Laurence,Bel appartement pour quelques jours à Paris qui est très bien situé.,"Le quartier est très sympa et l’appartement fonctionnel. La disposition de la salle de bain est très étriquée , 6 étages à monter à pied.",3.5,2024-01-15,0,booking_focused
+73,8,Yvonne,Het was behelpen met de ruimte.,Zesde verdieping zonder lift is wel heftig. Heel laag plafond en geen beenruimte bij de toilet en bed tegen de muur. Erg krap. Niet erg schoon helaas. Locatie had wel zijn charme en was redelijk rustig ‘s nachts.,3.0,2024-01-15,0,booking_focused
+74,8,Ivica,Extra lokacija sa dosta nedostataka,"Lokacija 
+Udobni kreveti
+Grejanje Kljuc uzimate na drugoj adresi a vraćate na trecoj
+Sesti sprat smestaja
+Potkrovlje 
+Niski plafoni
+Oseca se vlaga i budj 
+Ulazna vrata slabo obezbedjena
+Kupatilo nema prozor",4.0,2024-01-15,0,booking_focused
+75,8,Zambrano,Very good,"Esta en un piso 6 y no hay ascensor, del resto muy agradable",4.0,2024-01-15,0,booking_focused
+76,8,Gabriel,Exceptional,"Tal cual estaba expresado 6 pisos por escalera, apenas chico",5.0,2024-01-15,0,booking_focused
+77,8,Bihanze,Très mauvais séjour,"L’emmplacement Très fortes odeurs d’égouts 
+6e étage sans ascenseur et ce n’est pas dit dans l’annonce 
+Très forte humidité",1.0,2024-01-15,0,booking_focused
+78,8,Cyrille,Sejour catastrophique . Regrets eternels,"Nous avons ete depouilles. Des  vacances gachees . Cambrooles en plein apres midi . Nous avons tout perdu. Ordinateur , argent , tablette , bijoux .
+Contat de police , releve d'empteintes sur la porte defoncee. 
+Nous avons du aller nous loger aillieurs . 
+Urban Flat ne nous a pas accompagne dans cette detresse , ou nos enfants etaient traumatises Ils sont nuls tout simplement et entoures de personnes peu recommandables .
+Nous sommes persuades que le personnel de l'agence etait complice des cambr",1.0,2024-01-15,0,booking_focused
+79,9,Patricia,"Hotel and facilities are great, super conveniet location.","Within minutes of walk to the Daxing Int'l Airport. Great for early morning flights Very limited supper choices. Dear guests, thank you for your good comment, MUMIAN is...",4.5,2024-01-15,0,booking_focused
+80,9,Donald,Great location,"Great location.  Right at the airport terminal.  Could walk to check in. Dear guests, thank you for your good comment, MUMIAN is...",5.0,2024-01-15,0,booking_focused
+81,9,Viktoria,Loved it!!!,"Its the best way to spend the night before your flight from DaXing Airport. You literally walk 3 min from the reception to the Airport terminal without getting outside. Beautiful amenities, pool and the room itself. Everything is done thinking of you. Loved it! Everything was perfect. Thanks for your review, looking forward to you come back.",5.0,2024-01-15,0,booking_focused
+82,9,Michael,The best overnight stay in Daxin Airport,"The best overnight stay in Daxin Airport. Just few steps away from the Airport, actually it's a part of the Airport (no shuttles needed). Fresh and nice design, spacious room, very helpful staff, great service.  Couldn't be better for overnight Nothing Thanks for your review, looking forward to you come back.",5.0,2024-01-15,0,booking_focused
+83,9,Donna,Absolutely Amazing Hotel! By far one of the best,"One of the best hotels I have ever stayed at! I liked everything about this hotel. The suite, the location and the breakfast! Everything was absolutely perfect and such good value for money! We even had a swim after breakfast which was a lovely start to our long journey home.  The hotel is in the airport so no need for a taxi or any stress before your flight. Dear guests, thank you for your good comment, MUMIAN is...",5.0,2024-01-15,0,booking_focused
+84,9,Israel,Exceptional,"This hotel is part of the new airport in Beijing, designed by Zaha Hadid's team. The design is amazing.  The room has so many details. It is very comfortable and clean. Even if you don't have a layover in Beijing, you should try this hotel. I upgraded my stay to a junior suite for an extra $70, which included breakfast and was very good value. Suite on floor 2 with garage view. Dear guest, thank you very much for your recognition of...",5.0,2024-01-15,0,booking_focused
+85,9,Diego_mor,Exceptional,"Amazing architecture and stunning library! Dear guest, thank you very much for your recognition of...",5.0,2024-01-15,0,booking_focused
+86,9,Anton,Exceptional,"1. I was really excited by the “book” design of the hotel. It looks really nice.
+2. Good infrastructure N/A Dear guest, thank you very much for your recognition of...",5.0,2024-01-15,0,booking_focused
+87,9,Graham,An icredible hotel,"This hotel is incredible. How is it possible to offer so much for such an incredibly low price ?? nothing Dear guests, thank you for your good comment, MUMIAN is...",5.0,2024-01-15,0,booking_focused
+88,9,Marijke,Superb,"New and clean hotel That you had to wear (buy) a swimming cap in the pool Thanks for your review, looking forward to you come back.",4.5,2024-01-15,0,booking_focused
+89,10,Kanlayanee,"Great location, great food…even better service!","This property is in a fantastic location, making it easy to explore the area. I especially loved the Chinese-style breakfast — it was authentic and delicious. For those who prefer Western options, don’t worry — they offer those as well, so there’s something for everyone.
+
+The staff were truly exceptional: warm, helpful, and always ready to assist with a smile. The hotel itself is beautifully designed, creating a calm and uplifting atmosphere.
+
+I really appreciated the thoughtful touches, like th",5.0,2024-01-15,0,booking_focused
+90,10,Yuxin,Fantastic experience in a cosy hotel right in the middle of Beijing hutong,"Really love the size and layout of the room, as well as the location of the hotel, which is located within a traditional “hutong” in Beijing and encapsulates the genuine local experience. Also provides a great view from the rooftop bar (which even has a small pool!). Nothing major stands out but if I had to pick one, the breakfast options can be a bit limited for a longer stay, but honestly there are loads of easily accessible local options nearby. Dear Esteemed Guest, We sincerely appreciate yo",4.5,2024-01-15,0,booking_focused
+91,10,Dubkova,Nice stay!,"Nice location, quiet & peaceful, though close to everything. Spacious room, nice breakfast (semi european, semi chineese). The bath in front of the window was really cool. Dear Esteemed Guest, 
+We sincerely appreciate you...",4.0,2024-01-15,0,booking_focused
+92,10,Jure,Exceptional,"Perfect hotel. Room is esqusit! Highly recommended. Nothing. Dear Esteemed Guest, 
+We sincerely appreciate you...",5.0,2024-01-15,0,booking_focused
+93,10,Giulia,Exceptional,"Sparkling clean and all about luxory! Donì't miss out the breakfast!!!!!! It's a real deal Dear Esteemed Guest, We sincerely appreciate you choosing...",5.0,2024-01-15,0,booking_focused
+94,10,Marco,Exceptional,"Great room, great staff and a great location. Overall a great hotel to spend your time in Beijing. Nothing Dear Esteemed Guest, We sincerely appreciate you choosing...",5.0,2024-01-15,0,booking_focused
+95,10,Steven,"It was amazing, from the pick ip","Really a boutique hotel with the greatest staff ever. They all go that extra mile..
+Helped us with transport and tours.
+The hotel is good located in the short reach of all main attractions. The breakfast was every day the same, so after 5 nights you are looking for more variety. Dear Esteemed Guest, We sincerely appreciate you choosing...",4.5,2024-01-15,0,booking_focused
+96,10,Emily,Amazing hotel with lovely staff,"The hotel was fabulous, the staff were so friendly and so welcoming, they were one of the highlights of our trip. The room was luxurious and spacious and the breakfast had lots of options and was delicious. If i ever come back to beijing i will be staying here again!! Thank you so much for everything :) The bed had a thin mattress and was a bit hard but i think thats normal for china! Dear Valued Guest,​​
+Thank you for choosing to stay with...",5.0,2024-01-15,0,booking_focused
+97,10,Angela,Beautiful boutique hotel in a great location,"An absolutely beautiful hotel with character. I visit China for work and normally stay in big chains, but this time took a couple of days off and this was the perfect hotel and base. Great location for accessing everything - 10 minute walk to the metro, near to the capital airport express, near to pick up points for going to the Great Wall. Close to the Forbidden City, Lama Temple etc. Gorgeous breakfast room with a really nice view. Room was huge and very comfortable, all finished to a very hig",5.0,2024-01-15,0,booking_focused
+98,10,Julia,Highly recommended luxury local hotel,"We stayed once and we came back for second time. Amazing local hotel with very luxury facilites, the best breakfast in over 20 days in China, comfortable beds, spacious room and bathrooms, helpful and kind staff. Highly recommended. Nothing, a perfect stay. Dear Esteemed Guest, We sincerely appreciate you choosing...",5.0,2024-01-15,0,booking_focused
