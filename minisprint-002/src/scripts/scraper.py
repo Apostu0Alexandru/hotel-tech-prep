@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 
-class FocusedBookingScraper:
+class BookingScraper:
     def __init__(self, hotel_urls):
         self.hotel_urls = hotel_urls
         self.driver = None
@@ -52,7 +52,7 @@ class FocusedBookingScraper:
     def extract_reviews(self, soup):
         reviews = []
         
-        # Find review container using exact structure from your image
+        
         review_container = soup.select_one('div#reviewCardsSection[data-testid="review-list-container"]')
         if not review_container:
             print("Review container not found")
@@ -61,7 +61,6 @@ class FocusedBookingScraper:
         print(f"Found review container")
         
         # Find all review cards within the container
-        # Look for divs that contain review titles (indicating review cards)
         title_elements = review_container.select('h4[data-testid="review-title"]')
         print(f"Found {len(title_elements)} review titles")
         
@@ -81,19 +80,19 @@ class FocusedBookingScraper:
                     break
             
             try:
-                # Extract review title using your selector
+                
                 title = title_element.get_text(strip=True)
                 
-                # Extract username using your selector
+                
                 username_elements = review_card.select('.b08850ce41.f546354b44')
                 username = username_elements[0].get_text(strip=True) if username_elements else "Anonymous"
                 
-                # Extract review content using your selector
+                
                 content_elements = review_card.select('.b99b6ef58f.d14152e7c3 span')
                 content_parts = [el.get_text(strip=True) for el in content_elements if el.get_text(strip=True)]
                 content = ' '.join(content_parts) if content_parts else title
                 
-                # Extract overall rating using your selector
+                
                 rating = 4.0
                 rating_elements = review_card.select('.bc946a29db')
                 if rating_elements:
@@ -101,13 +100,13 @@ class FocusedBookingScraper:
                     numbers = re.findall(r'\d+\.?\d*', rating_text)
                     if numbers:
                         rating = float(numbers[0])
-                        if rating > 5:  # Convert 10-point to 5-point scale
+                        if rating > 5:  
                             rating = rating / 2
                 
-                # Extract category ratings using your selectors
+               
                 category_ratings = []
                 
-                # Find category names and ratings
+                
                 category_name_elements = review_card.select('.d96a4619c0')
                 category_rating_elements = review_card.select('.a9918d47bf.f87e152973')
                 
@@ -117,7 +116,7 @@ class FocusedBookingScraper:
                     
                     try:
                         category_rating = float(category_rating_text)
-                        if category_rating > 5:  # Convert 10-point to 5-point scale
+                        if category_rating > 5:  
                             category_rating = category_rating / 2
                         
                         category_ratings.append({
@@ -166,11 +165,11 @@ class FocusedBookingScraper:
                 
                 soup = self.load_page(url)
                 
-                # Extract hotel name
+                
                 hotel_name_el = soup.select_one('h2[data-testid="title"]')
                 hotel_name = hotel_name_el.get_text(strip=True) if hotel_name_el else f"Hotel {hotel_id}"
                 
-                # Determine location
+                
                 if '/ro/' in url:
                     location = "Bucharest, Romania"
                 elif '/fr/' in url:
@@ -180,7 +179,7 @@ class FocusedBookingScraper:
                 else:
                     location = "Unknown"
                 
-                # Extract reviews
+                
                 reviews = self.extract_reviews(soup)
                 
                 if reviews:
@@ -226,7 +225,7 @@ class FocusedBookingScraper:
                 
                 time.sleep(5)
             
-            # Export to CSV
+            
             if all_hotels and all_reviews:
                 # Hotels CSV
                 with open('hotels.csv', 'w', newline='', encoding='utf-8') as f:
@@ -284,5 +283,5 @@ if __name__ == "__main__":
         "https://www.booking.com/hotel/cn/zi-long-hua-yuan-jiu-dian.en-gb.html#tab-reviews"
     ]
     
-    scraper = FocusedBookingScraper(hotel_urls)
+    scraper = BookingScraper(hotel_urls)
     scraper.run()
