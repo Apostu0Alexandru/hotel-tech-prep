@@ -140,9 +140,9 @@ class BookingScraper:
                         'overall_rating': round(rating, 1),
                         'category_ratings': category_ratings
                     })
-                    print(f"    ✓ Review saved")
+                    print(f"Review saved")
                 else:
-                    print(f"    ✗ Review skipped (insufficient content)")
+                    print(f"Review skipped (insufficient content)")
                     
             except Exception as e:
                 print(f"    Error: {e}")
@@ -219,9 +219,9 @@ class BookingScraper:
                                 'rating_value': cat_rating['rating_value']
                             })
                     
-                    print(f"✓ SUCCESS: {hotel_name} - {len(reviews)} reviews, {sum(len(r['category_ratings']) for r in reviews)} category ratings")
+                    print(f"SUCCESS: {hotel_name} - {len(reviews)} reviews, {sum(len(r['category_ratings']) for r in reviews)} category ratings")
                 else:
-                    print(f"✗ SKIPPED: {hotel_name} - No reviews found")
+                    print(f"SKIPPED: {hotel_name} - No reviews found")
                 
                 time.sleep(5)
             
