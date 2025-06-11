@@ -17,3 +17,4 @@ CREATE INDEX idx_regions_name ON Regions (PropertyStateProvinceName);
 -- Composite index for common search pattern: hotels in city sorted by rating
 -- This supports queries like "best hotels in NYC"
 CREATE INDEX idx_hotels_search_performance ON Hotels (CityID, SabrePropertyRating DESC);
+

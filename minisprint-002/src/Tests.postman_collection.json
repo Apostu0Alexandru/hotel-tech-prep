@@ -71,7 +71,7 @@
               "    }",
               "});",
               "",
-              "console.log('✓ GET all hotels test completed');"
+              "console.log('GET all hotels test completed');"
             ]
           }
         }
@@ -114,7 +114,7 @@
               "    pm.expect(hotel.city).to.exist;",
               "});",
               "",
-              "console.log('✓ GET hotel by name test completed');"
+              "console.log('GET hotel by name test completed');"
             ]
           }
         }
@@ -175,7 +175,7 @@
               "// Save created hotel ID for PUT and DELETE tests",
               "const response = pm.response.json();",
               "pm.environment.set('created_hotel_id', response.data.GlobalPropertyID);",
-              "console.log('✓ POST create hotel test completed - ID:', response.data.GlobalPropertyID);"
+              "console.log('POST create hotel test completed - ID:', response.data.GlobalPropertyID);"
             ]
           }
         }
@@ -241,7 +241,7 @@
               "    pm.expect(hotel.PropertyZipPostal).to.equal('MS2001');",
               "});",
               "",
-              "console.log('✓ PUT update hotel test completed');"
+              "console.log('PUT update hotel test completed');"
             ]
           }
         }
@@ -282,7 +282,7 @@
               "",
               "// Clean up environment variable",
               "pm.environment.unset('created_hotel_id');",
-              "console.log('✓ DELETE hotel test completed - Test hotel removed from database');"
+              "console.log('DELETE hotel test completed - Test hotel removed from database');"
             ]
           }
         }
@@ -308,11 +308,11 @@
               "console.log('======================================');",
               "console.log('MiniSprint 2 - Requirement 7 COMPLETED');",
               "console.log('======================================');",
-              "console.log('✓ GET /hotels - Retrieve all hotels');",
-              "console.log('✓ GET /hotels/:name - Retrieve hotel by name');",
-              "console.log('✓ POST /hotels - Create new hotel');",
-              "console.log('✓ PUT /hotels/:id - Update hotel');",
-              "console.log('✓ DELETE /hotels/:id - Delete hotel');",
+              "console.log('GET /hotels - Retrieve all hotels');",
+              "console.log('GET /hotels/:name - Retrieve hotel by name');",
+              "console.log('POST /hotels - Create new hotel');",
+              "console.log('PUT /hotels/:id - Update hotel');",
+              "console.log('DELETE /hotels/:id - Delete hotel');",
               "console.log('======================================');",
               "console.log('All routes tested successfully!');",
               "console.log('Hotel Management API functionality verified');"

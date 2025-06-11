@@ -140,8 +140,8 @@ Hotel.init({
   tableName: 'hotels',
   timestamps: false,
   indexes: [
-    { fields: ['globalpropertyname'] },
-    { fields: ['sabrepropertyrating'] },
-    { fields: ['cityid'] }
+    // { fields: ['globalpropertyname'] },
+    // { fields: ['sabrepropertyrating'] },
+    // { fields: ['cityid'] },
   ]
 });

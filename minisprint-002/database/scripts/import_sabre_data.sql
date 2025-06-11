@@ -1,4 +1,6 @@
+
 \c hotel_management_db;
+
 
 -- Create staging table matching exact Sabre CSV headers
 CREATE TEMP TABLE staging_sabre (

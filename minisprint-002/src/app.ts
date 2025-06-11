@@ -1,14 +1,17 @@
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import rateLimit from 'express-rate-limit';
+
 
 import config from './config/env';
 import { testConnection } from './config/database';
 import { generateTestToken } from './middleware/auth';
 
+
 // Import routes
 import hotelRoutes from './routes/api/v1/hotels';
+import { any } from 'joi';
+import reviewRoutes from './routes/api/v1/reviews';
 
 const app: Application = express();
 
@@ -30,6 +33,7 @@ if (config.NODE_ENV === 'development') {
 
 // API routes
 app.use('/api/v1/hotels', hotelRoutes);
+app.use('/api/v1/reviews', reviewRoutes);
 
 // Health check endpoint
 app.get('/health', (req: Request, res: Response) => {
@@ -70,7 +74,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // 404 handler
-app.use('*', (req: Request, res: Response) => {
+app.use('/*path', (req: Request, res: Response) => {
   res.status(404).json({
     success: false,
     error: {

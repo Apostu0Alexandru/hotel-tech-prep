@@ -229,7 +229,7 @@ class BookingScraper:
             if all_hotels and all_reviews:
                 # Hotels CSV
                 with open('hotels.csv', 'w', newline='', encoding='utf-8') as f:
-                    fieldnames = ['globalpropertyid', 'globalpropertyname', 'propertyaddress1', 'sabrepropertyrating', 'propertylatitude', 'propertylongitude']
+                    fieldnames = ['globalpropertyid', 'globalpropertyname', 'propertystateprovincename', 'sabrepropertyrating', 'propertylatitude', 'propertylongitude']
                     writer = csv.DictWriter(f, fieldnames=fieldnames)
                     writer.writeheader()
                     writer.writerows(all_hotels)

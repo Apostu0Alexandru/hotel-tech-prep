@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { Op } from 'sequelize';
-import { Hotel, City, Region } from '../models';
+import { Hotel, City, Region } from '../models/associations';
 
 class HotelController {
   // GET /hotels - Retrieve all hotels with basic filtering and pagination

@@ -1,5 +1,3 @@
-\c hotel_management_db;
-
 -- Check total record counts
 SELECT 
     'Data Completeness Verification' as report,
