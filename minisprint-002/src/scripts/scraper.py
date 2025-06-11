@@ -188,7 +188,7 @@ class BookingScraper:
                         'globalpropertyid': hotel_id,
                         'globalpropertyname': hotel_name,
                         'propertyaddress1': location,
-                        'sabrepropertyrating': 4.5,
+                        'sabrepropertyrating': review['overall_rating'],
                         'propertylatitude': 44.4268 if 'Romania' in location else (48.8566 if 'France' in location else 39.9042),
                         'propertylongitude': 26.1025 if 'Romania' in location else (2.3522 if 'France' in location else 116.4074)
                     })
@@ -204,7 +204,7 @@ class BookingScraper:
                             'title': review['title'][:100],
                             'content': review['content'][:500],
                             'overall_rating': review['overall_rating'],
-                            'review_date': '2024-01-15',
+                            'review_date': '2025-06-11',
                             'helpful_votes': 0,
                             'platform': 'booking_focused'
                         })
@@ -227,14 +227,14 @@ class BookingScraper:
             
             
             if all_hotels and all_reviews:
-                # Hotels CSV
+                
                 with open('hotels.csv', 'w', newline='', encoding='utf-8') as f:
                     fieldnames = ['globalpropertyid', 'globalpropertyname', 'propertystateprovincename', 'sabrepropertyrating', 'propertylatitude', 'propertylongitude']
                     writer = csv.DictWriter(f, fieldnames=fieldnames)
                     writer.writeheader()
                     writer.writerows(all_hotels)
                 
-                # Users CSV
+                
                 users_list = [{'username': username, 'review_count': 1} for username in all_users]
                 with open('users.csv', 'w', newline='', encoding='utf-8') as f:
                     fieldnames = ['username', 'review_count']
@@ -242,14 +242,14 @@ class BookingScraper:
                     writer.writeheader()
                     writer.writerows(users_list)
                 
-                # Reviews CSV
+                
                 with open('reviews.csv', 'w', newline='', encoding='utf-8') as f:
                     fieldnames = ['review_id', 'hotel_id', 'username', 'title', 'content', 'overall_rating', 'review_date', 'helpful_votes', 'platform']
                     writer = csv.DictWriter(f, fieldnames=fieldnames)
                     writer.writeheader()
                     writer.writerows(all_reviews)
                 
-                # Category Ratings CSV
+                
                 with open('category_ratings.csv', 'w', newline='', encoding='utf-8') as f:
                     fieldnames = ['review_id', 'category_name', 'rating_value']
                     writer = csv.DictWriter(f, fieldnames=fieldnames)
